@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>板块分类 - CrystalLab论坛</title>
+    <meta name="description" content="CrystalLab论坛板块分类 - 浏览不同的晶体培养讨论区">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="forum.css">
+    <link rel="icon" href="favicon.ico" type="image/png">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="forum-navbar">
+        <div class="forum-nav-container">
+            <div class="forum-nav-brand">
+                <a href="index.html">
+                    <span>CrystalLab论坛</span>
+                </a>
+            </div>
+            <div class="forum-nav-menu">
+                <a href="index.html" class="forum-nav-link">首页</a>
+                <a href="forum.html" class="forum-nav-link">论坛</a>
+                <a href="categories.html" class="forum-nav-link active">板块</a>
+                <a href="members.html" class="forum-nav-link">会员</a>
+                <a href="help.html" class="forum-nav-link">帮助</a>
+            </div>
+            <div class="forum-nav-user">
+                <div class="user-auth">
+                    <a href="login.html" class="btn-login">登录</a>
+                    <a href="register.html" class="btn-register">注册</a>
+                </div>
+                <div class="user-logged-in" style="display: none;">
+                    <!-- 登录后的用户菜单 -->
+                </div>
+            </div>
+            <button class="forum-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="forum-main">
+        <div class="forum-container">
+            <!-- 页面标题 -->
+            <div class="page-header">
+                <h1>论坛板块</h1>
+                <p>选择您感兴趣的讨论区开始交流</p>
+            </div>
+
+            <!-- 板块列表 -->
+            <div class="categories-grid">
+                <!-- 晶体培养技术板块 -->
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">晶体培养技术</h3>
+                        <p class="category-desc">分享晶体培养的方法、技巧和经验交流</p>
+                        <div class="category-stats">
+                            <span class="stat">主题: 1,245</span>
+                            <span class="stat">帖子: 5,678</span>
+                        </div>
+                        <div class="category-latest">
+                            <span class="latest-post">最新: 硫酸铜晶体培养技巧</span>
+                            <span class="latest-time">2小时前</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品展示板块 -->
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">作品展示</h3>
+                        <p class="category-desc">展示您的晶体作品，分享成功喜悦</p>
+                        <div class="category-stats">
+                            <span class="stat">主题: 892</span>
+                            <span class="stat">帖子: 3,421</span>
+                        </div>
+                        <div class="category-latest">
+                            <span class="latest-post">最新: 磷酸二氢钾大单晶展示</span>
+                            <span class="latest-time">5小时前</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 问题求助板块 -->
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">问题求助</h3>
+                        <p class="category-desc">遇到培养问题？来这里寻求帮助</p>
+                        <div class="category-stats">
+                            <span class="stat">主题: 756</span>
+                            <span class="stat">帖子: 2,345</span>
+                        </div>
+                        <div class="category-latest">
+                            <span class="latest-post">最新: 氯化钠晶体长不大怎么办</span>
+                            <span class="latest-time">1小时前</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 材料与工具板块 -->
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">材料与工具</h3>
+                        <p class="category-desc">讨论晶体培养所需的材料和设备</p>
+                        <div class="category-stats">
+                            <span class="stat">主题: 543</span>
+                            <span class="stat">帖子: 1,876</span>
+                        </div>
+                        <div class="category-latest">
+                            <span class="latest-post">最新: 优质硫酸铜原料推荐</span>
+                            <span class="latest-time">3小时前</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 安全与环保板块 -->
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">安全与环保</h3>
+                        <p class="category-desc">实验室安全规范和环保处理讨论</p>
+                        <div class="category-stats">
+                            <span class="stat">主题: 321</span>
+                            <span class="stat">帖子: 987</span>
+                        </div>
+                        <div class="category-latest">
+                            <span class="latest-post">最新: 化学废液正确处理方式</span>
+                            <span class="latest-time">6小时前</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 新手入门板块 -->
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="category-content">
+                        <h3 class="category-title">新手入门</h3>
+                        <p class="category-desc">新手必看，从零开始学习晶体培养</p>
+                        <div class="category-stats">
+                            <span class="stat">主题: 432</span>
+                            <span class="stat">帖子: 1,543</span>
+                        </div>
+                        <div class="category-latest">
+                            <span class="latest-post">最新: 晶体培养基础教程</span>
+                            <span class="latest-time">1天前</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="forum-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CrystalLab论坛</h4>
+                    <p>晶体爱好者的交流社区，分享晶体培养经验与技巧</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">论坛首页</a></li>
+                        <li><a href="categories.html">板块分类</a></li>
+                        <li><a href="rules.html">社区规则</a></li>
+                        <li><a href="help.html">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>友情链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://crystal-lab.org">CrystalLab主站</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CrystalLab论坛. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="forum.js"></script>
+</body>
+</html>

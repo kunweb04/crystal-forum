@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrystalLab论坛 - 晶体爱好者的交流社区</title>
+    <meta name="description" content="CrystalLab论坛 - 晶体培养爱好者的交流平台，分享晶体制作经验、技巧与作品展示">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="forum.css">
+    <link rel="icon" href="favicon.ico" type="image/png">
+</head>
+<body id="forum-index"> 
+    <nav class="forum-navbar">
+        <div class="forum-nav-container">
+            <div class="forum-nav-brand">
+                <a href="index.html">
+                    <span>CrystalLab论坛</span>
+                </a>
+            </div>
+            <div class="forum-nav-menu">
+                <a href="index.html" class="forum-nav-link active">首页</a>
+                <a href="forum.html" class="forum-nav-link">论坛</a> 
+                <a href="categories.html" class="forum-nav-link">板块</a>
+                <a href="members.html" class="forum-nav-link">会员</a>
+                <a href="help.html" class="forum-nav-link">帮助</a>
+            </div>
+            <div class="forum-nav-user">
+                <div class="user-auth" id="user-auth-guest">
+                    <a href="#" class="btn-login" id="show-login-modal">登录</a>
+                    <a href="register.html" class="btn-register">注册</a>
+                </div>
+                <div class="user-logged-in" id="user-auth-logged-in" style="display: none;">
+                    <div class="user-dropdown">
+                        <div class="user-avatar">
+                            <span class="user-level" id="nav-user-level">Lv.0</span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="profile.html" class="dropdown-item">
+                                <i class="fas fa-user"></i>个人资料
+                            </a>
+                            <a href="my-posts.html" class="dropdown-item">
+                                <i class="fas fa-file-alt"></i>我的帖子
+                            </a>
+                            <a href="messages.html" class="dropdown-item">
+                                <i class="fas fa-envelope"></i>消息
+                                <span class="badge">3</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="settings.html" class="dropdown-item">
+                                <i class="fas fa-cog"></i>设置
+                            </a>
+                            <a href="#" class="dropdown-item" id="nav-logout-btn">
+                                <i class="fas fa-sign-out-alt"></i>退出
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="forum-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="forum-main">
+        <div class="forum-container">
+            <div class="forum-hero">
+                <div class="hero-content">
+                    <h1>晶体爱好者交流社区</h1>
+                    <p>分享晶体培养经验，展示精美作品，结交志同道合的朋友</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10086</span>
+                            <span class="stat-label">会员</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1314</span>
+                            <span class="stat-label">帖子</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2451</span>
+                            <span class="stat-label">回复</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="new-post.html" class="btn-primary">
+                        <i class="fas fa-plus"></i>发表新帖
+                    </a>
+                </div>
+            </div>
+
+            <div class="forum-content">
+                <div class="forum-posts">
+                    <div class="posts-filter">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active">最新</button>
+                            <button class="filter-tab">热门</button>
+                            <button class="filter-tab">精华</button>
+                            <button class="filter-tab">待审核</button>
+                        </div>
+                        <div class="filter-search">
+                            <div class="search-box">
+                                <input type="text" placeholder="搜索帖子...">
+                                <button class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="posts-list" id="posts-list-container">
+                        <p class="loading-message">正在从 D1 数据库加载最新的帖子...</p>
+                    </div>
+
+                    <div class="posts-pagination" id="posts-pagination-container">
+                        </div>
+                </div>
+
+                <aside class="forum-sidebar">
+                    <div class="sidebar-card user-card" id="sidebar-user-card" style="display: none;">
+                        <div class="card-header">
+                            <h3>我的信息</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="user-info">
+                                <div class="user-avatar-large">
+                                    <span class="user-level-badge" id="sidebar-user-level">Lv.0</span>
+                                </div>
+                                <div class="user-details">
+                                    <h4 class="user-name" id="sidebar-user-name">用户名</h4>
+                                    <p class="user-title">晶体爱好者</p>
+                                    <div class="user-stats">
+                                        <div class="user-stat">
+                                            <span class="stat-value" id="sidebar-user-posts">0</span>
+                                            <span class="stat-label">帖子</span>
+                                        </div>
+                                        <div class="user-stat">
+                                            <span class="stat-value" id="sidebar-user-comments">0</span>
+                                            <span class="stat-label">回复</span>
+                                        </div>
+                                        <div class="user-stat">
+                                            <span class="stat-value" id="sidebar-user-points">0</span>
+                                            <span class="stat-label">积分</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card stats-card">
+                        <div class="card-header">
+                            <h3>论坛统计</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="stats-list">
+                                <div class="stat-item">
+                                    <i class="fas fa-users"></i>
+                                    <div class="stat-info">
+                                        <span class="stat-value" id="stats-members">1,284</span>
+                                        <span class="stat-label">注册会员</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-file-alt"></i>
+                                    <div class="stat-info">
+                                        <span class="stat-value" id="stats-posts">5,672</span>
+                                        <span class="stat-label">主题帖子</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-comments"></i>
+                                    <div class="stat-info">
+                                        <span class="stat-value" id="stats-comments">23,451</span>
+                                        <span class="stat-label">回复数量</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-user-clock"></i>
+                                    <div class="stat-info">
+                                        <span class="stat-value" id="stats-online">42</span>
+                                        <span class="stat-label">在线用户</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card tags-card">
+                        <div class="card-header">
+                            <h3>热门标签</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="tags-list">
+                                <a href="#" class="tag">硫酸铜</a>
+                                <a href="#" class="tag">晶体培养</a>
+                                <a href="#" class="tag">新手求助</a>
+                                <a href="#" class="tag">作品展示</a>
+                                <a href="#" class="tag">磷酸二氢钾</a>
+                                <a href="#" class="tag">氯化钠</a>
+                                <a href="#" class="tag">明矾</a>
+                                <a href="#" class="tag">金属铋</a>
+                                <a href="#" class="tag">结晶技巧</a>
+                                <a href="#" class="tag">问题解决</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="forum-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CrystalLab论坛</h4>
+                    <p>晶体爱好者的交流社区，分享晶体培养经验与技巧</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-qq"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">论坛首页</a></li>
+                        <li><a href="categories.html">板块分类</a></li>
+                        <li><a href="rules.html">社区规则</a></li>
+                        <li><a href="help.html">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>友情链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://crystal-lab.org">CrystalLab主站</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CrystalLab论坛. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="forum.js"></script>
+</body>
+</html>

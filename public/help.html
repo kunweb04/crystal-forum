@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮助中心 - CrystalLab论坛</title>
+    <meta name="description" content="CrystalLab论坛帮助中心 - 使用指南和常见问题">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="forum.css">
+    <link rel="icon" href="favicon.ico" type="image/png">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="forum-navbar">
+        <div class="forum-nav-container">
+            <div class="forum-nav-brand">
+                <a href="index.html">
+                    <span>CrystalLab论坛</span>
+                </a>
+            </div>
+            <div class="forum-nav-menu">
+                <a href="index.html" class="forum-nav-link">首页</a>
+                <a href="forum.html" class="forum-nav-link">论坛</a>
+                <a href="categories.html" class="forum-nav-link">板块</a>
+                <a href="members.html" class="forum-nav-link">会员</a>
+                <a href="help.html" class="forum-nav-link active">帮助</a>
+            </div>
+            <div class="forum-nav-user">
+                <div class="user-auth">
+                    <a href="login.html" class="btn-login">登录</a>
+                    <a href="register.html" class="btn-register">注册</a>
+                </div>
+                <div class="user-logged-in" style="display: none;">
+                    <!-- 登录后的用户菜单 -->
+                </div>
+            </div>
+            <button class="forum-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="forum-main">
+        <div class="forum-container">
+            <!-- 页面标题 -->
+            <div class="page-header">
+                <h1>帮助中心</h1>
+                <p>在这里找到使用论坛的指南和常见问题解答</p>
+            </div>
+
+            <!-- 帮助内容 -->
+            <div class="help-content">
+                <div class="help-sidebar">
+                    <div class="help-nav">
+                        <h3>目录</h3>
+                        <ul class="help-nav-list">
+                            <li><a href="#getting-started" class="nav-link active">新手指南</a></li>
+                            <li><a href="#posting" class="nav-link">发帖与回复</a></li>
+                            <li><a href="#formatting" class="nav-link">内容格式化</a></li>
+                            <li><a href="#account" class="nav-link">账号管理</a></li>
+                            <li><a href="#community" class="nav-link">社区规则</a></li>
+                            <li><a href="#faq" class="nav-link">常见问题</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="help-main">
+                    <!-- 新手指南 -->
+                    <section id="getting-started" class="help-section">
+                        <h2>新手指南</h2>
+                        <div class="help-item">
+                            <h3>如何注册账号</h3>
+                            <p>点击页面右上角的"注册"按钮，填写必要的个人信息即可完成注册。注册后请验证邮箱以激活账号。</p>
+                        </div>
+                        <div class="help-item">
+                            <h3>如何开始第一个帖子</h3>
+                            <p>在论坛首页点击"发表新帖"按钮，选择合适的板块，填写标题和内容后提交即可。</p>
+                        </div>
+                        <div class="help-item">
+                            <h3>论坛积分系统</h3>
+                            <p>论坛采用积分制，发帖、回复、获得点赞等行为都可以获得积分，积分可以提升用户等级。</p>
+                        </div>
+                    </section>
+
+                    <!-- 发帖与回复 -->
+                    <section id="posting" class="help-section">
+                        <h2>发帖与回复</h2>
+                        <div class="help-item">
+                            <h3>如何发表高质量的帖子</h3>
+                            <p>提供清晰的标题、详细的内容描述、相关的图片和正确的分类标签，这样更容易获得其他用户的关注和回复。</p>
+                        </div>
+                        <div class="help-item">
+                            <h3>回复帖子的技巧</h3>
+                            <p>回复时请保持礼貌，针对问题提供有价值的建议或分享相关经验。避免简单的"顶"或"支持"等无意义回复。</p>
+                        </div>
+                        <div class="help-item">
+                            <h3>如何上传图片</h3>
+                            <p>在发帖或回复时，使用编辑器中的图片上传功能，支持JPG、PNG格式，单张图片大小不超过5MB。</p>
+                        </div>
+                    </section>
+
+                    <!-- 常见问题 -->
+                    <section id="faq" class="help-section">
+                        <h2>常见问题</h2>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <h3>为什么我的帖子需要审核？</h3>
+                                <p>新用户的首次发帖、包含链接的帖子或触发敏感词的帖子会自动进入审核队列，这是为了维护社区内容质量。</p>
+                            </div>
+                            <div class="faq-item">
+                                <h3>如何修改已发布的帖子？</h3>
+                                <p>在帖子下方找到"编辑"按钮，即可修改帖子内容。注意：超过24小时的帖子编辑需要管理员审核。</p>
+                            </div>
+                            <div class="faq-item">
+                                <h3>忘记密码怎么办？</h3>
+                                <p>在登录页面点击"忘记密码"，通过注册邮箱重置密码。如果邮箱也无法使用，请联系管理员。</p>
+                            </div>
+                            <div class="faq-item">
+                                <h3>如何举报不当内容？</h3>
+                                <p>在帖子或回复下方找到"举报"按钮，选择举报原因并提交。管理员会及时处理您的举报。</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 联系方式 -->
+                    <section class="help-section contact-section">
+                        <h2>需要更多帮助？</h2>
+                        <p>如果以上内容无法解决您的问题，请联系我们：</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>support@crystal-lab.org</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-qq"></i>
+                                <span>QQ群: 123456789</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-weixin"></i>
+                                <span>微信公众号: CrystalLab</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="forum-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CrystalLab论坛</h4>
+                    <p>晶体爱好者的交流社区，分享晶体培养经验与技巧</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-qq"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">论坛首页</a></li>
+                        <li><a href="categories.html">板块分类</a></li>
+                        <li><a href="rules.html">社区规则</a></li>
+                        <li><a href="help.html">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>友情链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://crystal-lab.org">CrystalLab主站</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CrystalLab论坛. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="forum.js"></script>
+</body>
+</html>

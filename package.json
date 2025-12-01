@@ -1,0 +1,10 @@
+{
+  "name": "crystal-forum-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Pages Function for Crystal Forum",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "hono": "^4.0.0"
+  }
+}
